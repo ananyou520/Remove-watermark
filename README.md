@@ -7,7 +7,7 @@
 
 <table>
     <tr>
-        <td><img src="https://simgs.emoboy.vip/app-show/shuiyin/2.png"/></td>
+        <td><img src="https://simgs.emoboy.vip/app-show/shuiyin/wxh.jpg"/></td>
         <td><img src="https://simgs.emoboy.vip/app-show/shuiyin/3.png"/></td>
     </tr>
     <tr>
