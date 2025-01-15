@@ -1,0 +1,133 @@
+
+<view class="fav-hint" style="display: {{showAddMeBtn&&scrollTop==0?'block':'none'}};">
+    <text>添加到我的小程序</text>
+    <view bindtap="onClickAddToMinProgramCloseBtn" class="close-fav-hint"></view>
+</view>
+<view class="swiperBanner">
+    <swiper autoplay="true" circular="true" duration="500" indicatorDots="true" interval="5000">
+        <swiper-item wx:for="{{lunbo}}" wx:key="index">
+            <navigator appId="{{item.app_id}}" class="items" extraData="" hoverClass="none" openType="navigate" path="{{item.path}}" target="miniProgram" version="release" wx:if="{{item.app_id.length>1}}">
+                <image class="slide-image" mode="aspectFill" src="{{url}}{{item.img}}"></image>
+            </navigator>
+            <navigator url="{{item.app_name}}" wx:if="{{item.app_name.length>1}}">
+                <image src="{{url}}{{item.img}}"></image>
+            </navigator>
+            <navigator class="items" hoverClass="none" openType="navigate" url="../../pages/web/index?url={{item.path}}" wx:if="{{item.path.length>1}}">
+                <image src="{{url}}{{item.img}}"></image>
+            </navigator>
+            <image src="{{url}}{{item.img}}" wx:if="{{item.app_id.length<1}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view bindtap="tipKeFuMsg" class="gonggao" wx:if="{{description}}">
+    <i-notice-bar loop  icon="systemprompt" speed="1300">{{description}}</i-notice-bar>
+</view>
+<view bindtap="copy" class="zhifubao" wx:if="{{copyText}}">
+        <view class="wenzi">
+            <text class="left">{{adText}}</text>
+			<text class="fuzhi">☜点击关注</text>
+        </view>
+	</view>
+    <view class="inputmain" wx:if="{{isAudit==0}}">
+        <view class="weui-cells weui-cells_after-title" style="width:400rpx;border-radius:10rpx 0 0 10rpx;">
+            <view class="weui-cell weui-cell_input box2">
+							<view class="weui-cell__bd" style="height: 86rpx;display:flex;">
+								<view class="iconfont icon-lianjie lianjie"></view>
+                <input bindconfirm="recommend" bindinput="invalue" class=" weui-input" confirmType="search" name="url" placeholder="视频或图集链接" value="{{inputvalue}}"></input>
+            </view>
+                <view class="weui-cell__ft" wx:if="{{inputvalue}}">
+                    <icon bindtap="clear" color="#E64340" size="23" type="clear"></icon>
+                </view>
+            </view>
+        </view>
+        <view bindtap="query" bindtouchend="end" bindtouchstart="start" class="jiexibut" style="background-color: {{color}}; width: 140rpx; height: 86rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">解析</view>
+
+		
+		<view bindtap="zhantie" bindtouchend="end" bindtouchstart="start" class="jiexibutB" style="background-color: {{color}}; width: 140rpx; height: 86rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">粘贴</view>
+    </view>
+		<text class="text1">支持解析：youTube | FaceBook | Twitter | 等一百多个平台</text>
+
+        <view style="display: flex;background-color: #fff;padding-bottom: 8px;padding-top: 20px;">
+		<view class="box" style="width: 50%;overflow: hidden;margin-right: 0px;margin-left: 15px;background-image: linear-gradient(60deg,#32bbfb 30%, #24e3ff 70%);border-radius: 10px;height: 80px;">
+				<navigator style="opacity:1;background-color:rgba(0, 0, 0, 0);display: flex;" bindtap="help">
+					<view style="width:65%;overflow:hidden;padding-left: 20px;">
+						<view style="line-height: 18px;padding-top: 23px;">
+							<text style="font-size:35rpx;overflow:hidden;color:#fff;font-weight: 600;">使用教程</text>
+						</view>
+						<view>
+							<text style="overflow:hidden;color:#fff;font-size: 25rpx;">如何去水印</text>
+						</view>
+					</view>
+					<view style="width:35%;margin-left: 15px;">
+						<image src="/images/bz2.png" style="width:110rpx;height:110rpx;display:block;padding:22px 35rpx 0 0;"></image>
+					</view>
+				</navigator>
+			</view>
+			<view class="box" style="width: 50%;overflow: hidden;margin-right:15px;margin-left: 8px;background-image: linear-gradient(60deg,#f4700f 30%,#ff9900 70%);border-radius: 10px;height: 80px;">
+				<navigator style="opacity:1;background-color:rgba(0, 0, 0, 0);display: flex;" bindtap="user">
+					<view style="width:65%;overflow:hidden;padding-left: 20px;">
+						<view style="line-height: 18px;padding-top: 23px;">
+							<text style="font-size:35rpx;overflow:hidden;color:#fff;font-weight: 600;">MD5说明</text>
+						</view>
+						<view>
+							<text style="overflow:hidden;color:#fff;font-size: 25rpx;">改MD5上热门</text>
+						</view>
+					</view>
+					<view style="width:35%;margin-left: 15px;">
+						<image src="/images/01.png" style="width:110rpx;height:110rpx;display:block;padding:22px 35rpx 0 0;"></image>
+					</view>
+				</navigator>
+		     </view>
+	     </view>
+		 <view style="display: flex;background-color: #fff;padding-bottom: 10px;padding-top: 0px;">
+			<view class="box" style="width: 50%;overflow: hidden;margin-right: 0px;margin-left: 15px;background-image: linear-gradient(60deg,#2fd883 30%,#55efa2 70%);border-radius: 10px;height: 80px;">
+				<navigator style="opacity:1;background-color:rgba(0, 0, 0, 0);display: flex;" bindtap="shibai">
+					<view style="width:65%;overflow:hidden;padding-left: 20px;">
+						<view style="line-height: 18px;padding-top: 23px;">
+							<text style="font-size:35rpx;overflow:hidden;color:#fff;font-weight: 600;">常见问题</text>
+						</view>
+						<view>
+							<text style="overflow:hidden;color:#fff;font-size: 25rpx;">去水印失败</text>
+						</view>
+					</view>
+					<view style="width:35%;margin-left: 15px;">
+						<image src="/images/02.png" style="width:110rpx;height:110rpx;display:block;padding:22px 35rpx 0 0;"></image>
+					</view>
+				</navigator>
+			</view>
+			<view class="box" style="width: 50%;overflow: hidden;margin-right:15px;margin-left: 8px;background-image: linear-gradient(60deg, #6c66fe 30%,#d28ff8 70%);border-radius: 10px;height: 80px;">
+				<navigator style="opacity:1;background-color:rgba(0, 0, 0, 0);display: flex;" bindtap="cishu">
+				  <image class="hot3" src="/images/hot3.png"></image>
+					<view style="width:65%;overflow:hidden;padding-left: 20px;">
+						<view style="line-height: 18px;padding-top: 23px;">
+							<text style="font-size:35rpx;overflow:hidden;color:#fff;font-weight: 600;">邀请好友</text>
+						</view>
+						<view>
+							<text style="overflow:hidden;color:#fff;font-size: 25rpx;">转发邀请好友</text>
+						</view>
+					</view>
+					<view style="width:35%;margin-left: 15px;">
+						<image src="/images/fx2.png" style="width:110rpx;height:110rpx;display:block;padding:22px 35rpx 0 0;"></image>
+					</view>
+				</navigator>
+			</view>
+		</view>
+		<view class="ad" wx:if="{{ad_shiping.length>0}}">
+			<ad adTheme="white" adType="video" unit-id="{{ad_shiping}}"></ad>
+    </view>
+		<view class="wrapper shareWrap">
+			<view class="contain">
+				<view class="wrap">
+					<view class="icon">
+						<image class="iconImg" lazyLoad="true" mode="aspectFill" src="/images/icofx.png"></image>
+					</view>
+					<view class="text">分享给好友，共同解锁更多的奖励。</view>
+					<button class="button-share reButton" data-from="{{shareFrom.INVITE}}" openType="share">
+                    <view class="text">分 享</view>
+                </button>
+				</view>
+			</view>
+		</view>
+		<view class="weui-footer">
+        <view class="weui-footer__text">视频归平台及作者所有，本应用不储存任何视频及图片。</view>
+    </view>

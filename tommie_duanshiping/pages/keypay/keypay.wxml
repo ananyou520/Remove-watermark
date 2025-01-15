@@ -1,0 +1,24 @@
+
+<view class="wrapper redeemWrapper">
+    <view class="contain" style="width: 750rpx; height: 609rpx; display: block; box-sizing: border-box;">
+        <view class="mainWrap">
+            <view class="inputP">
+                <input bindinput="invalue" class="input" placeholder="请输入卡密" placeholderClass="placeholder-class" style="width: 644rpx; height: 109rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx" value=""></input>
+            </view>
+            <view bindtap="duihuan" class="button-redeem {{key==''?'':'active'}}">
+                <view class="text">确认兑换</view>
+            </view>
+        </view>
+        <view class="descriptWrap">
+            <view class="titlebar">使用说明</view>
+            <view class="terms">
+                <view class="term">1.卡密可以兑换、会员，可以从购买、活动等途径获得</view>
+                <view class="term">2.会员可以免广告,无需等待看广告</view>
+                <view class="term">3.卡密不限用户，仅能兑换一次</view>
+                <view class="term">4.未使用的卡密长期有效</view>
+                <view class="term">5.卡密兑换后立即到账，在已有的基础上可延续使用时长</view>
+                <view class="term"  style="color: red;" wx:if="{{weixin}}">6.{{weixin}}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="box">
+    <button bindopensetting="handleSetting" class="savephoto" openType="openSetting" wx:if="{{isPic}}">授权保存</button>
+    <button class="btn2 " openType="share">
+        <view style="font-size:14px">分享加次数</view>
+    </button>
+    <view wx:for="{{tuijian}}" wx:key="key">
+        <navigator appId="{{item.app_id}}" class="items" extraData="" hoverClass="none" openType="navigate" path="{{item.path}}" target="miniProgram" version="release" wx:if="{{item.app_id.length>1}}">
+            <image src="{{url}}{{item.img}}"></image>
+            <view class="t">
+                <text>{{item.app_name}}</text>
+            </view>
+        </navigator>
+        <navigator class="items" hoverClass="none" openType="navigate" url="../../pages/web/index?url={{item.path}}" wx:else>
+            <image src="{{url}}{{item.img}}"></image>
+            <view class="t">
+                <text>{{item.app_name}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>

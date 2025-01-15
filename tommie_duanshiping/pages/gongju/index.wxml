@@ -1,0 +1,24 @@
+
+<view wx:for="{{tuijian}}" wx:key="key">
+    <navigator appId="{{item.app_id}}" extraData="" openType="navigate" path="{{item.path}}" style="opacity:1;background-color:rgba(0, 0, 0, 0);display: flex;" target="miniProgram" version="release" wx:if="{{item.app_id.length>1}}">
+        <view bindtap="__e" class="mini-container" openType="navigate">
+            <image class="logo2" mode="widthFix" src="{{url}}{{item.img}}"></image>
+            <view class="text-container">
+                <text class="title">{{item.app_name}}</text>
+                <text class="subtitle">{{item.app_miaoshu}}</text>
+            </view>
+            <image class="arrow-right" src="/tommie_duanshiping/resource/image/didi.png"></image>
+        </view>
+    </navigator>
+    <navigator openType="navigate" style="opacity:1;background-color:rgba(0, 0, 0, 0);display: flex;" url="../../pages/web/index?url={{item.path}}" wx:else>
+        <image class="logo" mode="widthFix" src="{{url}}{{item.img}}"></image>
+        <view class="text-container">
+            <text class="title">{{item.app_name}}</text>
+            <text class="subtitle">{{item.app_miaoshu}}</text>
+        </view>
+        <image class="arrow-right" src="/tommie_duanshiping/resource/image/didi.png"></image>
+    </navigator>
+</view>
+<view class="ad" wx:if="{{tuijiangg.length>0}}">
+			<ad adTheme="white" adType="video" unit-id="{{tuijiangg}}"></ad>
+    </view>

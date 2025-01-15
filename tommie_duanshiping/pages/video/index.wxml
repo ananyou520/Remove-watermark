@@ -1,0 +1,76 @@
+<view class="container border-10 task-container">
+    <view class="task-header-container border-10">
+        <view class="title">每日任务</view>
+        <view class="subtitle">完成任务获得额外奖励</view>
+    </view>
+    <view class="task"  wx:if="{{is_guankan==1}}">
+            <image class="arrow-right" src="/tommie_duanshiping/resource/image/VIP(1).png"></image>
+        <view class="infoscontainer">
+            <view class="info">
+                <text class="title">会员特权</text>
+            </view>
+            <view class="expebar">
+                <view class="valua">不限次数,免广告,尊贵的VIP标识</view>
+            </view>
+        </view>
+        <button class="cu-btn round bg-blue shadow"  bindtap='VIP'>
+            <text>去开通</text>
+        </button>
+    </view>
+    <view class="task">
+        <view class="infoscontainer">
+            <view class="info">
+                <view class="tag">Hot</view>
+                <text class="title">邀请新用户</text>
+            </view>
+            <view class="expebar">
+                <view class="exp">U P</view>
+                <view class="value"> 邀请一人奖励{{invite_award}}次</view>
+            </view>
+        </view>
+        <button class="cu-btn round bg-blue shadow" openType="share">
+            <text>去邀请</text>
+        </button>
+    </view>
+
+    <view class="task" wx:if="{{is_guankan==1}}">
+        <view class="infoscontainer">
+            <view class="info">
+                <view class="tag1">每日</view>
+                <text class="title">每日签到</text>
+            </view>
+            <view class="expebar">
+                <view class="exp">U P</view>
+                <view class="value">每日签到奖励{{check_num}}次</view>
+            </view>
+        </view>
+        <button bindtap="qd" class="cu-btn round bg-orange shadow" wx:if="{{nowtime>lastti}}">
+            <text>去签到</text>
+        </button>
+        <button bindtap="last" class="cu-btn round bg-orange shadow" wx:else>
+            <text>已签到</text>
+        </button>
+    </view>
+
+    <view class="task">
+            <view class="infoscontainer">
+                <view class="info">
+                    <view class="tag7">新人</view>
+                    <text class="title">新人福利</text>
+                </view>
+                <view class="expebar">
+                    <view class="exp">U P</view>
+                    <view class="value">首次登陆赠送{{mix_num}}次</view>
+                </view>
+            </view>
+            <button class="cu-btn round bg-orange shadow" wx:if="{{yanzheng}}">
+            <text>已完成</text>
+        </button>
+        <button bindtap="gologssin" class="cu-btn round bg-orange shadow" wx:else>
+            <text>去登录</text>
+        </button>
+        </view>
+</view>
+<view class="ad" wx:if="{{tuijiangg.length>0}}">
+			<ad adTheme="white" adType="video" unit-id="{{tuijiangg}}"></ad>
+    </view>

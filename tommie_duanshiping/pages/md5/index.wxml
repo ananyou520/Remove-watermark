@@ -1,0 +1,48 @@
+<view class="content">
+    <view class="content_t">
+        <view class="content_t_x">
+            <view class="content_t_x_c" wx:if="{{xiugaistate==1}}">
+                <button bindtap="addvideobutton" class="addvideos" plain="true">
+                    <image class="content_t_x_t_image" src="/images/plus.png"></image>
+                </button>
+            </view>
+            <view class="content_t_x_c" wx:if="{{xiugaistate==2}}">
+                <video id="myVideo" src="{{urldata}}"></video>
+            </view>
+        </view>
+    </view>
+    <view class="group" wx:if="{{xiugaistate==2}}">
+        <view class="item one-px-b">
+            <text>视频时间: {{durationtime}}</text>
+        </view>
+        <view class="item one-px-b">
+            <text>视频大小: {{videosize}}</text>
+        </view>
+        <view class="item one-px-b">
+            <text>修改前MD5: {{oldmd5}}</text>
+        </view>
+        <view class="item one-px-b">
+            <text>修改后MD5: {{newmd5}}</text>
+        </view>
+    </view>
+    <view class="content_z">
+        <view class="content_z_c" wx:if="{{xiugaistate==1}}">
+            <view class="content_z_c_tishi">
+        {{tishitext}}
+      </view>
+    </view>
+    </view>
+    <view bindtap="savevideo" class="content_reset" wx:if="{{xiugaistate==2}}">
+    保存修改内容
+  </view>
+    <view bindtap="resetvideo" class="content_reset_1" wx:if="{{xiugaistate==2}}">
+    清空修改内容
+  </view>
+    <view class="content_z" wx:if="{{adid}}">
+        <view class="ad">
+    <ad unitId="{{adid}}"></ad>
+</view>
+    </view>
+
+</view>
+

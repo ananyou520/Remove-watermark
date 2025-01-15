@@ -1,0 +1,94 @@
+page {
+    background-color: #fff;
+}
+
+.titlebar {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 10px 0 15px;
+}
+
+.redeemWrapper .contain {
+    margin-bottom: 12rpx;
+    margin-top: 24rpx;
+    padding: 24rpx;
+}
+
+.redeemWrapper .mainWrap {
+    margin-bottom: 100rpx;
+    padding: 0 30rpx;
+}
+
+.redeemWrapper .mainWrap .inputP {
+    font-size: 30rpx;
+    margin-top: 140rpx;
+    padding-bottom: 70rpx;
+}
+
+.redeemWrapper .mainWrap .inputP .input {
+    border-bottom: 1rpx solid #e3e3e3;
+    color: #474747;
+    line-height: 1em;
+    overflow: scroll;
+    padding: 30rpx 0;
+    text-align: center;
+}
+
+.redeemWrapper .mainWrap .placeholder-class {
+    color: #bbb;
+    padding: 10px 0;
+}
+
+.redeemWrapper .mainWrap .clearBtn {
+    padding: 15px 0;
+}
+
+.redeemWrapper .mainWrap .clearBtn .text {
+    color: #1f2141;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.redeemWrapper .mainWrap .button-redeem {
+    background-color: #d9d9d9;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.redeemWrapper .mainWrap .button-redeem .text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1em;
+}
+
+.redeemWrapper .mainWrap .button-redeem.active {
+    background-color: #fc6839;
+}
+
+.redeemWrapper .descriptWrap {
+    padding: 0 15px;
+}
+
+.redeemWrapper .descriptWrap .terms .term {
+    color: #828386;
+    font-size: 24rpx;
+    line-height: 2em;
+    padding-bottom: 5px;
+}
+
+.ad {
+    border-radius: 10rpx;
+    margin: 330rpx 40rpx 0;
+    overflow: hidden;
+}
+
+.information {
+    background-color: #fff;
+    border-radius: 16rpx;
+    display: flex;
+    margin: 26rpx 24rpx 0;
+    padding: 48rpx 4rpx 58rpx;
+}

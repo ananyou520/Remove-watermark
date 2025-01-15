@@ -1,0 +1,85 @@
+<view wx:if="{{vip==0}}">
+<view class="ad" wx:if="{{ad_tupian.length>0}}">
+	<ad adTheme="white" adType="video" unit-id="{{ad_tupian}}"></ad>
+    </view>
+</view>
+<view wx:if="{{playurl}}">
+    <view class="swiper-tab">
+        <view bindtap="swichNav" class="swiper-tab-list {{currentTab==0?'on':''}}" data-current="0">视频</view>
+        <view bindtap="swichNav" class="swiper-tab-list {{currentTab==1?'on':''}}" data-current="1">封面</view>
+        <view bindtap="swichNav" class="swiper-tab-list {{currentTab==2?'on':''}}" data-current="2">标题</view>
+    </view>
+    <swiper bindchange="bindChange" class="swiper-box" current="{{currentTab}}" duration="300">
+        <swiper-item>
+            <video controls class="video-box" src="{{playurl}}"></video>
+            <view class="percent" wx:if="{{percent}}">
+                <progress showInfo backgroundColor="white" bindtap="progress" borderRadius="50" duration="30" percent="{{percent}}"></progress>
+            </view>
+            <button bindtap="copydownurl" class="bt3 cu-btn bg-green shadow">复制链接</button>
+            <button bindtap="savevideo" class="bt2 cu-btn bg-orange shadow">保存视频</button>
+            <button bindtap="buttonTap" class="bt6 cu-btn bg-blue shadow" wx:if="{{adimg.length>35}}">赞赏本程序</button>
+            <button bindtap="goBack" class="bt5 cu-btn bg-cyan shadow">返回到首页</button>
+        </swiper-item>
+        <swiper-item>
+            <view wx:if="{{downimg!=''}}">
+                <view class="box">
+                    <image controls bindtap="previewimage" class="images" mode="heightFix" src="{{downimg}}"></image>
+                </view>
+                <button bindtap="tupianmg" class="bt3 cu-btn bg-green shadow">复制链接</button>
+                <button bindtap="imgid" class="bt2 cu-btn bg-orange shadow">保存封面</button>
+                <button bindtap="buttonTap" class="bt6 cu-btn bg-blue shadow" wx:if="{{adimg.length>35}}">赞赏本程序</button>
+                <button bindtap="goBack" class="bt5 cu-btn bg-cyan shadow">返回到首页</button>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view wx:if="{{title!=''}}">
+                <view class="txtbox">
+                    <text class="title">{{title}}</text>
+                </view>
+                <button bindtap="copytitles" class="bt7 cu-btn bg-green shadow">复制标题文案</button>
+                <button bindtap="goBack" class="bt5 cu-btn bg-cyan shadow">返回到首页</button>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+<view wx:if="{{imgsdown}}">
+    <view>
+        <view class="toast" wx:if="{{list_show}}">
+            <view class="prograss"> 正在下载第{{currentindex}}/{{downimgs.length}}张 <progress activeColor="#52bcff" class="pro" percent="{{percents}}" strokeWidth="3"></progress>
+            </view>
+        </view>
+        <button bindtap="download" class="down" wx:if="{{downimgs.length}}">保存所有图片</button>
+        <button class="down" bindtap="copytitles">复制标题文案</button>
+    </view>
+    <view class="list" wx:if="{{downimgs!=''}}">
+        <view class="list-half">
+            <view class="card" wx:if="{{index%2==0}}" wx:for="{{downimgs}}" wx:key="index">
+                <image bindtap="previewImage" class="slide-image" data-src="{{item}}" mode="widthFix" src="{{item}}"></image>
+                <view class="list">
+					<text class="title1" bindtap="copydownimgs" data-src="{{item}}">复制链接</text>
+					<text class="title2" bindtap="saveimgs" data-src="{{item}}">下载图片</text>
+				</view>
+            </view>
+        </view>
+        <view class="list-half" wx:if="{{downimgs!=''}}">
+            <view class="card" wx:if="{{index%2!=0}}" wx:for="{{downimgs}}" wx:key="index">
+                <image bindtap="previewImage" class="slide-image" data-src="{{item}}" mode="widthFix" src="{{item}}"></image>
+                <view class="list">
+					<text class="title1" bindtap="copydownimgs" data-src="{{item}}">复制链接</text>
+					<text class="title2" bindtap="saveimgs" data-src="{{item}}">下载图片</text>
+				</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="container">
+    <modal bindcancel="modalCandel" bindconfirm="modalConfirm" hidden="{{modalHidden}}" title="致用户的话">
+        <view>
+            <image class="image" mode="aspectFill" src="{{adImg}}"></image>
+        </view>
+        <view>亲爱的用户，您好！</view>
+        <view>你们的支持和认可是我们最大的动力！</view>
+        <view>本程序在用户中具有良好的口碑</view>
+        <view>感谢您的理解和支持！</view>
+    </modal>
+</view>

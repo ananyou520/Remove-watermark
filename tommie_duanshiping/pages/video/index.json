@@ -1,0 +1,6 @@
+{
+    "navigationBarBackgroundColor": "#52bcff",
+    "usingComponents": {
+        "i-button": "../../../dist/button/index"
+    }
+}

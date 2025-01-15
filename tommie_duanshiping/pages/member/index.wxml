@@ -1,0 +1,139 @@
+<view wx:if="{{yanzheng}}">
+    <view wx:if="{{num<0}}">
+    <view class="cu-list menu card-menu margin-top">
+        <view class="cu-item">
+            <view class="head cu-avatar radius">
+                封禁
+            </view>
+            <view class="content text">
+                <view style="width: 410rpx;">
+
+                    <view class="cu-tag round sm">封禁用户</view>
+                    <view class="cu-tag round sm" wx:if="{{id}}">UID：{{id}}</view>
+                </view>
+                <view class="text-gray text-sm flex text-a">
+                    <text class="text-cut">你的账号已被封禁！</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view bindtap="getUserProfile" class="cu-list menu card-menu margin-top" wx:else>
+        <view class="cu-item">
+            <view wx:if="{{userInfo.avatarUrl}}" class="head cu-avatar radius">
+                <image class="login" src="{{userInfo.avatarUrl}}"></image>
+            </view>
+            <view class="head cu-avatar radius" wx:else>
+                <image class="login" src="{{avatarUrl}}"></image>
+            </view>
+            <view class="content text">
+                <view style="width: 410rpx;">
+                    <view  wx:if="{{userInfo.avatarUrl}}" class="text-black text-bold name">
+                        <text>{{userInfo.nickName}}</text>
+                    </view>
+                    <view class="text-black text-bold name" wx:else>
+                        <text>{{nickName}}</text>
+                    </view>
+                    <view class="cu-tag round bg-blue sm" wx:if="{{date==1}}">普通用户</view>
+                    <view class="cu-tag round bg-red sm" wx:else>VIP用户</view>
+                    <view class="cu-tag round bg-orange sm" wx:if="{{id}}">UID：{{id}}</view>
+                </view>
+                <view wx:if="{{is_pay==1}}">
+                <view class="text-gray text-sm flex text-a" wx:if="{{date==1}}">
+                    <text class="text-cut">剩余解析次数：{{num}}</text>
+                </view>
+                <view class="text-gray text-sm flex text-a" wx:else>
+                    <text class="text-cut">会员有效期：{{date}}</text>
+                </view>
+            </view>
+                <view class="text-gray text-sm flex text-a" wx:else>
+                    <text class="text-cut">欢迎使用{{app_name}}~</text>
+                </view>
+
+            </view>
+        </view>
+    </view>
+</view>  
+
+<view class="cu-list menu card-menu margin-top"wx:else>
+    <view class="cu-item">
+        <view class="head cu-avatar radius">
+            <image class="login" src="/images/132.jpg"></image>
+        </view>
+        <view class="content text">
+            <view>
+            <view class="text-black text-bold name">
+                    <view><button bindgetuserinfo="updateUserInfo" class="jiexibut" openType="getUserInfo" class="cu-tag round bg-orange" >点击登陆</button></view>
+                </view>
+                <view class="cu-tag round bg-blue sm">未登录用户</view>
+            </view>
+            <view class="text-gray text-sm flex text-a">
+                <text class="text-cut">请登录后使用本程序</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="cu-list menu  card-menu margin-top">
+    <view class="cu-list grid col-4 no-border">
+        <view bindtap="gorecorder" class="cu-item">
+            <view class="cuIcon-video text-blue"></view>
+            <text>视频标识</text>
+        </view>
+        <view bindtap="goshare" class="cu-item">
+            <view class="cuIcon-friend text-green"></view>
+            <text>邀请列表</text>
+        </view>
+        <view bindtap="gocourse" class="cu-item">
+            <view class="cuIcon-edit text-orange"></view>
+            <text>使用教程</text>
+        </view>
+        <view bindtap="zanshang" class="cu-item" data-target="Image">
+            <view class="cuIcon-qr_code text-purple">
+                <view class="cu-tag badge"></view>
+            </view>
+            <text>赞赏作者</text>
+        </view>
+    </view>
+</view>
+
+<view class="cu-list menu sm-border card-menu margin-top">
+    <view bindtap="cdkey" class="cu-item arrow" wx:if="{{isMember==1}}">
+        <view class="content">
+            <text class="cuIcon-ticket text-orange"></text>
+            <text class="text-grey">卡密兑换</text>
+        </view>
+    </view>
+    <view bindtap="business" class="cu-item arrow">
+        <view class="content">
+            <text class="cuIcon-service text-olive"></text>
+            <text class="text-grey">联系客服</text>
+        </view>
+    </view>
+    <view bindtap="gosetup" class="cu-item arrow">
+        <view class="content">
+            <text class="cuIcon-settings text-blue"></text>
+            <text class="text-grey">系统设置</text>
+        </view>
+    </view>
+    <view class="cu-item arrow" wx:if="{{isMember==1}}">
+        <view class="content">
+            <text class="cuIcon-vip text-yellow"></text>
+            <text class="text-grey">会员免广告：{{date!=1?'已开启':'已关闭'}}</text>
+        </view>
+    </view>
+</view>
+<view class="cu-modal  {{modalName=='Image'?'show':''}}">
+    <view class="cu-dialog">
+        <view class="bg-img" mode="aspectFill" style="background-image:url({{admire_img}});height:380px;">
+            <view class="cu-bar justify-end text-white">
+                <view bindtap="hidezs" class="action text-grey">
+                    <text class="cuIcon-close"></text>
+                </view>
+            </view>
+        </view>
+        <view class="cu-bar bg-white">
+            <view bindtap="hidezs" class="action margin-0 flex-sub solid-left">{{admire_title}}</view>
+        </view>
+    </view>
+</view>

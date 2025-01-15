@@ -1,0 +1,24 @@
+<view class="group"></view>
+<view class="group">
+  <button bindtap="clearCache" class="item one-px-b pure-btn">
+    <text class="content">清理缓存</text>
+    <text class="right_icon"></text>
+  </button>
+</view>
+<view class="item-extend-desc">若遇到使用问题，请清除缓存并重新进入小程序</view>
+<view class="group">
+  <view bindtap="openSettingClicked" class="item one-px-b">
+    <text class="content">权限管理</text>
+    <text class="right_icon"></text>
+  </view>
+</view>
+<view class="group">
+  <button openType="contact" class="item one-px-b">
+    <text class="content">联系客服</text>
+    <text class="right_icon"></text>
+  </button>
+  <button class="item one-px-b" openType="feedback">
+        <text class="content">意见反馈</text>
+        <text class="right_icon"></text>
+    </button>
+</view>

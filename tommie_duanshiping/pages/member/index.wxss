@@ -1,0 +1,40 @@
+.head {
+    border-radius: 16rpx!important;
+    display: flex;
+    height: 135rpx;
+    margin: 25rpx 0;
+    overflow: hidden;
+    width: 145rpx;
+}
+
+.text {
+    margin-left: 30rpx;
+}
+
+.text-a {
+    margin-top: 10rpx;
+}
+
+.name {
+    font-size: 35rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ad,.name {
+    overflow: hidden;
+}
+
+.ad {
+    border-radius: 15rpx;
+    margin: 30rpx 30rpx 30rpx;
+}
+
+.login {
+    border-radius: 16rpx!important;
+    display: flex;
+    height: 135rpx;
+    margin: 25rpx 0;
+    overflow: hidden;
+    width: 145rpx;
+}

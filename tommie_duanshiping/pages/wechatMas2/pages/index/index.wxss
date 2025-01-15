@@ -1,0 +1,72 @@
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-img {
+    height: 20vh;
+    width: 30vw;
+    position: absolute;
+    top: 36.6vh;
+    left: 50vw;
+    transform: translate(-50%);
+    border-radius: 8px;
+}
+
+
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.usermotto {
+    margin-top: 200px;
+}
+
+.savephoto {
+    position: fixed;
+    bottom: 0;
+}
+
+.btn1 {
+    margin-left: 55rpx;
+}
+
+.btn1,.btn2 {
+    width: 40%;
+    height: 80rpx;
+    margin-top: 30rpx;
+    background-color: #deb887;
+    color: #fff;
+    border-radius: 98rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 25rpx;
+    z-index: 9;
+}
+
+.btn2 {
+    margin-left: 30%;
+}
+
+.btnImg {
+    margin-right: 8rpx;
+    width: 46rpx;
+    height: 46rpx;
+}
+
+.btn1::after {
+    border-radius: 98rpx;
+    border: 0;
+}

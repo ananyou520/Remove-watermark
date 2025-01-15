@@ -1,0 +1,98 @@
+<ad unitId=""></ad>
+<view class="container">
+    <view class="main">
+        <view class="c">
+		为什么要手动下载？因为小程序限制，不能直接下载超过10-20MB的视频，或者视频超长，在这两种情况下就要手动下载视频。
+        <view class="lines"></view>
+        首先要确认保存视频到相册授权的权限是否打开，弹出权限请求框，请点击确认。
+        <view style="text-align: center;background-color: #fff;padding-bottom: 0px;">
+                <view style="width: 100%;">
+                    <image src="/tommie_duanshiping/resource/image/d2.jpg" style="width: 100%;height: 153px;margin-left: 0px;margin-top: 0px;"></image>
+                </view>
+            </view>
+        电脑通用方法：复制已去水印的视频链接到电脑，在浏览器打开后“右键另存视频到本地”;
+        <view class="lines"></view>
+        链接复制如下，下面教程通用复制方法：
+        <view style="text-align: center;background-color: #fff;padding-bottom: 0px;">
+                <view style="width: 100%;">
+                    <image src="/tommie_duanshiping/resource/image/fuzhi.jpg" style="width: 80%;height: 70px;margin-left: 0px;margin-top: 10px;"></image>
+                </view>
+            </view>
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/anzhuo.png "></image> 安卓用户手动下载方法？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+            * 安卓用户建议使用浏览器下载视频（测试机型；小米）
+            <view class="lines"></view>
+            自带浏览器可能无法下载，部分机型会提示权限不足
+			<view class="lines"></view>
+			安卓机经测试后可正常下载的浏览器如下（优先推荐QQ浏览器、其次：夸克浏览器、360极速浏览器、UC浏览器等，可自行测试）
+		</view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/ios.png "></image> ios用户手动下载方法？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+            经测试，ios用户浏览器是不能下载的，必须要通过第三方软件支持下;
+            <view class="line"></view>
+            进入APP Store下载documents下载，图文教程如下：
+            <view style="text-align: center;background-color: #fff;padding-bottom: 0px;">
+                <view style="width: 100%;">
+                    <image src="/tommie_duanshiping/resource/image/tuwenjiaocheng.jpg" style="width: 100%;height: 1300px; margin-left: 0px;margin-top: 10px;"></image>
+                </view>
+            </view>
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 为什么解析失败？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+            1、可能当前网络不稳定造成的；
+            <view class="lines"></view>
+            2、解析接口不稳定造成的；
+            <view class="lines"></view>
+            遇到解析失败请多尝试几次，也可杀微信后台后再试！
+            <view class="lines"></view>
+            3、也有可能是您复制的链接有误
+            <view class="lines"></view>
+            抖音为例地址是:（https://v.douyin.com/JQoyU6N/）
+            <view class="lines33"></view>
+            快手为例地址是:（https://v.kuaishou.com/5fTz4i/）
+            <view class="lines"></view>
+            4、也有可能是没有登录，请到个人中心登陆即可
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 为什么无法下载视频？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+			如果视频大于10M或者下载到一半下载进度突然消失，这个时候小程序可能无法直接下载的，可以复制下载链接通过其他方法下载:详情看上方教程
+			<view class="lines"></view>
+			*ios用户建议使用[Docunments]下载视频(在App store下载即可);
+			<view class="lines"></view>
+           * 安卓用户建议使用QQ浏览器下载视频;
+            <view class="lines"></view>
+            *或者复制已去水印的视频链接到电脑，在浏览器打开后“右键另存视频到本地”;
+            
+		</view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 解析失败会扣积分吗？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+			不会的，请放心使用。
+			<view class="lines"></view>
+			如果由于系统异常导致的错误扣积分，您可联系管理员为您补偿积分。
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 有VIP不限量解析权限吗？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+			当然有了，去个人中心联系微信客服开通;
+			
+		</view>
+    </view>
+</view>

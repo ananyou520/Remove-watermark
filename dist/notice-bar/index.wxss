@@ -1,0 +1,42 @@
+.i-noticebar {
+    height: 72rpx;
+    line-height: 72rpx;
+    font-size: 14px;
+    color: #f76a24;
+    background-color: #fefcec;
+    overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.i-noticebar,.i-noticebar-icon {
+    display: flex;
+}
+
+.i-noticebar-icon {
+    margin-left: 30rpx;
+    margin-left: 10rpx;
+}
+
+.i-noticebar-icon,.i-noticebar-operation {
+    align-items: center;
+}
+
+.i-noticebar-operation {
+    display: flex;
+    margin-right: 16rpx;
+}
+
+.i-noticebar-content-wrap {
+    position: relative;
+    flex: 1;
+    margin: 0 30rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.i-noticebar-content-wrap .i-noticebar-content {
+    position: absolute;
+    transition-duration: 20s;
+}

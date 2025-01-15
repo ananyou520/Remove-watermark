@@ -1,0 +1,89 @@
+<view class="container">
+    <view class="main">
+
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 如何去水印？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+			1、打开需要去水印的短视频APP，找到分享按钮点击分享选择“复制链接”。(也可看首页简易教程怎么获取)
+			<view class="lines"></view>
+			2、打开本程序会自动获取到复制的链接，点击粘贴，然后再点击解析就可以获取到去除水印的视频了。
+        </view>
+        <ad unitId=""></ad>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 为什么我解析了视频还有水印？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+			请检查AAP中原作者上传的视频本身是否有水印，如果视频本身有水印暂时是无法去除的，抱歉!
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/bangzhu.png "></image> 为什么解析失败？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+            1、可能当前网络不稳定造成的；
+            <view class="lines"></view>
+            2、解析接口不稳定造成的；
+            <view class="lines"></view>
+            遇到解析失败请多尝试几次，也可杀微信后台后再试！
+            <view class="lines"></view>
+            3、也有可能是您复制的链接有误
+            <view class="lines"></view>
+            4、也有可能是没有登录，请到个人中心登陆即可
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/news.png"></image> 为什么会无法下载或下载失败？
+    </view>
+        <view class="line"></view>
+        <view class="c">
+      1、由于手机系统及微信安全机制，保存视频到相册需要手动授权，弹出权限请求框，请点击确认。
+      <view style="text-align: center;background-color: #fff;padding-bottom: 0px;">
+                <view style="width: 100%;">
+                    <image src="/tommie_duanshiping/resource/image/d2.jpg" style="width: 100%;height: 153px;margin-left: 0px;margin-top: 0px;"></image>
+                </view>
+            </view>
+            <view class="lines"></view>
+      2、微信小程序平台机制限定小程序内保存文件不能超过10MB或者下载到一半下载进度突然消失，部分视频较长去水印后大小超过10Mb会导致下载失败,可以复制链接到浏览器下载。
+      <view class="lines"></view>
+      *ios用户建议使用[Docunments]下载视频(在App store下载即可);
+			<view class="lines"></view>
+            *安卓用户建议使用QQ浏览器下载视频;
+            <view class="lines"></view>
+            *或者复制已去水印的视频链接到电脑，在浏览器打开后“右键另存视频到本地”;
+            <view class="lines"></view>
+        链接复制如下，下面教程通用复制方法：
+        <view style="text-align: center;background-color: #fff;padding-bottom: 0px;">
+                <view style="width: 100%;">
+                    <image src="/tommie_duanshiping/resource/image/fuzhi.jpg" style="width: 80%;height: 70px;margin-left: 0px;margin-top: 10px;"></image>
+                </view>
+            </view>
+        </view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/anzhuo.png "></image> 安卓用户手动下载方法？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+            * 安卓用户建议使用浏览器下载视频（测试机型；小米）
+            <view class="lines"></view>
+            自带浏览器可能无法下载，部分机型会提示权限不足
+			<view class="lines"></view>
+			安卓机经测试后可正常下载的浏览器如下（优先推荐QQ浏览器、其次：夸克浏览器、360极速浏览器、UC浏览器等，可自行测试）
+		</view>
+        <view class="t">
+            <image src="/tommie_duanshiping/resource/image/ios.png "></image> ios用户手动下载方法？
+        </view>
+        <view class="line"></view>
+        <view class="c">
+            经测试，ios用户浏览器是不能下载的，必须要通过第三方软件支持下;
+            <view class="line"></view>
+            进入APP Store下载documents下载，图文教程如下：
+            <view style="text-align: center;background-color: #fff;padding-bottom: 0px;">
+                <view style="width: 100%;">
+                    <image src="/tommie_duanshiping/resource/image/tuwenjiaocheng.jpg" style="width: 100%;height: 1300px; margin-left: 0px;margin-top: 10px;"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
