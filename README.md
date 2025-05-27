@@ -31,21 +31,10 @@
 * 需要后端请打开微信搜索公众号关注 “依沫资源网” 或微信扫面上方二维码关注微信公众号发送 "去水印代码" 即可获取
 
 ## 技术支持
+
 - 如有问题，代部署搭建欢迎联系作者
-<table>
-    <tr>
-        <td align="center" bgcolor=#F6F8FA>微信</td>
-        <td align="center" bgcolor=#F6F8FA>QQ</td>
-    </tr>
-    <tr>
-        <td bgcolor=#FFFFFF><img width = "300" src="https://simgs.emoboy.vip/appimg/bigwx.png"/></td>
-        <td bgcolor=#FFFFFF><img width = "300" src="https://img.eplusskin.com/uploads/20240730/qiuqiu3.png"/></td>
-    </tr>
-    <tr>
-        <td align="center">yimocc666</td>
-        <td align="center">1149297946</td>
-    </tr>
-</table>
+
+<img width = "650" src="https://simgs.emoboy.vip/appimg/ause/wx_qq.png"/>
 
 
 
